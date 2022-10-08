@@ -1,0 +1,16 @@
+Searching files and directories 
+
+find /home [Directory home]
+find / [all directories]
+find ./ [my directory forward]
+
+Example: 
+find ./ -name text.txt [param name] - Will search basead on param in context of directory 
+find ./ -name text* 
+
+find ./ -user joao -name text.txt [Searching on user Joao with the param name]
+
+------------------------------------------------------
+
+Combining Commands: 
+find ./ -name text* -exec ls -l {} \;

@@ -1,0 +1,51 @@
+Basic Commands: 
+
+cd - Chance Directories 
+cd namefolder [to enter]
+cd .. [to out previous]
+
+------------------------------------------------------
+
+ls - List files and directories
+ls -ltr [older to newer]
+There are too many parameters for the ls command...
+
+------------------------------------------------------
+
+ps - List proccess
+ps (only my process and on my session)
+ps axu 
+ps axu|more
+There are too many parameters for the ps command...
+
+------------------------------------------------------
+
+touch - Create a file or update file date
+
+------------------------------------------------------
+
+For more information of commands 
+man nameCommand 
+nomeCommand --help
+
+------------------------------------------------------
+
+echo - Priting 
+echo Message 
+echo -n "Fedora" [Whitout \n]
+echo -e "Fedora\t" [Allow formatation]
+
+------------------------------------------------------
+
+mkdir - Make Directory
+mkdir dir1 
+mkdir dir1/exe1
+mkdir -p dir2/exe2 [Creates the folder tree even if it is non-existent]
+
+------------------------------------------------------
+
+rm - remove files
+rm test.txt 
+rm -r [for directory]
+rm -f [force removal and ignore message]
+

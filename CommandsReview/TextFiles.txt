@@ -1,0 +1,95 @@
+Text file manipulation: 
+
+cat - priting content files
+cat text.txt 
+cat -b text.txt [enumerated lines on lines non empty]
+cat -b text.txt [enumerated lines on lines with empty]
+
+------------------------------------------------------
+
+tac - printing content files but, from end to beginning
+
+------------------------------------------------------
+
+tail - printing the last ten lines of a file
+tail -n5 text.txt [last five lines]
+
+------------------------------------------------------
+
+head - printing the first ten lines of a file 
+head -n5 [first five lines]
+head -c10 text.txt [first ten characters]
+
+------------------------------------------------------
+
+wc - count [count charecters, words, lines and bytes]
+wc -l [only lines]
+wc -w [only words]
+wc -m [only characters] 
+wc -c [only bytes]
+wc text* [count every file with name text]
+
+------------------------------------------------------
+
+Example of command combinations: 
+tail -n5 text.txt |wc -w 
+
+------------------------------------------------------
+
+sort - ordination
+sort text.txt [ASC]
+sort -r text.txt [DESC]
+
+sort -k2 text.txt [indice for ordenation is a second field] 
+
+------------------------------------------------------
+
+uniq - printing words non repeat [Always sort before]
+uniq text.txt
+sort text.txt |uniq
+uniq -u [Only first time]
+uniq -u [Lines duplicated or more]
+uniq -c [count repeat]
+
+------------------------------------------------------
+
+tr - translate or delete characters
+
+cat text.txt |tr a e [Change characters a to e on file]
+cat text.txt |tr a-z A-Z [lower case to upper case]
+cat text.txt |tr -d aeiou [delete words of parameter]
+echo fedora |tr [:lower:] [:upper:]
+
+------------------------------------------------------
+
+cat text.txt |cut -d " " -f1
+tail /etc/passwd |cut -d ":" -f1,5
+
+------------------------------------------------------
+
+diff - comparing files
+diff text.txt text1.txt 
+diff -r dir1 dir2 [directory]
+
+------------------------------------------------------
+
+grep - searching on string 
+
+grep Joao text.txt 
+grep Joao text*
+grep "Joao Gabriel Carvalho" text.txt
+grep -i JOAO text.txt [no case sensitive] 
+grep -c Joao text.txt [count times word Joao is present on file]
+grep -v Joao text.txt [exclude line with word Joao]
+grep -r Joao * [Directory only. Searching all files in tree]
+grep -rl Joao * [List the file]	 
+grep -A3 param [Printing after three lines of param ]
+grep -B3 param [Printing before three lines of param ]
+
+------------------------------------------------------
+
+sed - stream editor for filtering and transforming text
+
+sed '1,3 d' text.txt [Delete line 1,2 and 3]
+sed '/Joao/d' text.txt [Search word Joao and delete line]
+cat text.txt |sed 's/Joao/Gabriel' [Will replace the word John with Gabriel]
